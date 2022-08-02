@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(25, 0, 71);
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+section .scroll {
+    display: flex;
+    transform: rotate(90deg) translate(0px, 0px);
+    position: absolute;
+    left: 95px;
+    top: 0;
+    transform-origin: left top; /* 중심이동 */
+}
+
+section .scroll div{
+    background: #fff;
+    white-space: nowrap;
+    font-size: 4rem;
+    animation: animate1 40s linear infinite;
+}
+
+section .scroll div:nth-child(2) {
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+
+section .scroll div span {
+    -webkit-text-stroke: 2px #000;
+    color: transparent;
+}
+
+@keyframes animate1 {
+
+    /* animate가 하나이면 튕기는 현상 있음, 두번째 것으로 숨겨줌 */
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
