@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+<section>
+    <div class="scroll">
+        <div>
+            Green<span>computerart</span>
+            Green<span>computerart</span>
+            Green<span>computerart</span>
+            Green<span>computerart</span>
+        </div><!-- //1 -->
+        <div>
+            Green<span>computerart</span>
+            Green<span>computerart</span>
+            Green<span>computerart</span>
+            Green<span>computerart</span>
+        </div><!-- //2 -->
+    </div><!-- //scroll -->
+    <div class="scroll2"></div>
+</section>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+
+    // var s1 = document.querySelector('.scroll');
+    // var dupNode = s1.cloneNode(deep);
+    var s1 = $('.scroll').clone();
+// 변수 cloneElements를 만들어 복사된 요소들을 저장
+
+    s1 .appendTo('section');
+</script>
+</body>
+
+</html>
